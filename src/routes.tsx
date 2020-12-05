@@ -14,6 +14,7 @@ function Routes() {
         <Screen
           name="Home"
           component={Home}
+          options={{ headerShown: false}}
         />
       </Navigator>
     </NavigationContainer>
