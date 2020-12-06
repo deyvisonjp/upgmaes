@@ -1,14 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
-import { ScrollView, TextInput } from 'react-native-gesture-handler';
+import { FlatList, ScrollView, TextInput } from 'react-native-gesture-handler';
 
-import Games, {} from '../../components/Games';
+import Games, { } from '../../components/Games';
+import { useNavigation } from '@react-navigation/native';
 
-export default function Home() {
+interface GamesList {
+  id: any;
+  image: string;
+  name: String;
+  price: Number;
+  onClick: any;
+}
+
+let str = '';
+
+function Home() {
+  const [listGames, setListGames] = useState<GamesList[]>([]);
+
+  useEffect(() => {
+    const DadosGames = require('../../data/products.json')
+    setListGames(DadosGames)
+  }, [])
+
+  const navigation = useNavigation();
+  // function handleNavigateToDetails(ident) {
+  //   navigation.navigate("Details", { ident })
+  // }
+
   return (
     <View style={styles.container}>
-
       <View style={{ backgroundColor: '#0e0e10' }}>
         <View style={styles.header}>
           <TouchableOpacity>
@@ -18,7 +40,7 @@ export default function Home() {
               color='#fff'
             />
           </TouchableOpacity>
-          <Image
+          <Image style={{ marginTop: 15 }}
             source={require('../../assets/img/logo.png')}
           />
           <TouchableOpacity>
@@ -55,22 +77,19 @@ export default function Home() {
 
       <ScrollView>
         <Text style={styles.textTitle}>Games em Destaque</Text>
-        
+
         <View style={styles.games}>
-          <Games
-            onClick = "É uma bosta mesmo"
-            imgGame = {require('../../assets/img/logo.png')}
-            descricao = "Super Teste"
-            price = "R$ 99,00"
-          > 
-          </Games>
-          <Games
-            onClick = "É uma bosta mesmo"
-            imgGame = {require('../../assets/img/logo.png')}
-            descricao = "Super Teste"
-            price = "R$ 99,00"
-          >
-          </Games>
+
+          {listGames.map((game) => (
+            <Games
+              key={game.id}
+              imgGame={require(`../../assets/img/${game.image}`)}
+              name={game.name}
+              price={game.price}
+              onClick='' //{() => handleNavigateToDetails(item.id)}              
+            />
+          ))}
+
         </View>
 
       </ScrollView>
@@ -111,6 +130,7 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     textAlign: 'center',
     fontSize: 18,
+    padding: 10,
     color: '#0e0e10'
   },
   line: {
@@ -119,6 +139,10 @@ const styles = StyleSheet.create({
   },
   games: {
     flexDirection: 'row',
-    justifyContent: 'space-around'
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    width: '100%',
   }
 });
+
+export default Home;

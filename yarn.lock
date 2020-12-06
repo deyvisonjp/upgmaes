@@ -1009,6 +1009,11 @@
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/michroma/-/michroma-0.1.0.tgz#a1ba6b14c982eab8720b3ccaa75e2816ec7d5509"
   integrity sha512-on3BwQZSoz3L17VEj/NTUgqdVkVt96LAM4dh2mJADNuD2Bwz+JSgSx0dGXpZD8xtaj0qzIurEz6xj847SLDhTA==
 
+"@expo-google-fonts/russo-one@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/russo-one/-/russo-one-0.1.0.tgz#cc944c5f0f76a278af8d0e5f86d1c6a4c155d98b"
+  integrity sha512-AQL9vOVZMgr4YA0HHyxw7bvXC/+Zy8ztZSKukXP9d5UEJiG8xcu74UsyNfHW8OjiY3mw68tArOzmUnCWSPjPqw==
+
 "@expo/configure-splash-screen@0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@expo/configure-splash-screen/-/configure-splash-screen-0.2.0.tgz#84f9f71363259f16fd0073636a198c750a3cdd7c"
