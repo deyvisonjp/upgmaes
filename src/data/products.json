@@ -4,62 +4,62 @@
     "name": "Super Mario Odyssey",
     "price": 197.88,
     "score": 100,
-    "image": "super-mario-odyssey.png"
+    "image": "https://images-na.ssl-images-amazon.com/images/I/518mL2i0riL._AC_SY445_.jpg"
   },
   {
     "id": 201,
     "name": "Call Of Duty Infinite Warfare",
     "price": 49.99,
     "score": 80,
-    "image": "call-of-duty-infinite-warfare.png"
+    "image": "https://upload.wikimedia.org/wikipedia/pt/9/97/COD-IW_%28capa%29.jpeg"
   },
   {
     "id": 102,
     "name": "The Witcher III Wild Hunt",
     "price": 119.5,
     "score": 250,
-    "image": "the-witcher-iii-wild-hunt.png"
+    "image": "https://upload.wikimedia.org/wikipedia/pt/0/06/TW3_Wild_Hunt.png"
   },
   {
     "id": 99,
     "name": "Call Of Duty WWII",
     "price": 249.99,
     "score": 205,
-    "image": "call-of-duty-wwii.png"
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/1/18/Call_of_Duty_WWII_Cover_Art.jpg/220px-Call_of_Duty_WWII_Cover_Art.jpg"
   },
   {
     "id": 12,
     "name": "Mortal Kombat XL",
     "price": 69.99,
     "score": 150,
-    "image": "mortal-kombat-xl.png"
+    "image": "https://images-na.ssl-images-amazon.com/images/I/81MYe42UTvL._AC_SY550_.jpg"
   },
   {
     "id": 74,
     "name": "Shards of Darkness",
     "price": 71.94,
     "score": 400,
-    "image": "shards-of-darkness.png"
+    "image": "https://upload.wikimedia.org/wikipedia/en/4/4b/Styx_Shards_of_Darkness_Cover_Art.jpg"
   },
   {
     "id": 31,
     "name": "Terra Média: Sombras de Mordor",
     "price": 79.99,
     "score": 50,
-    "image": "terra-media-sombras-de-mordor.png"
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71FMNZ%2B7ueL._AC_SX522_.jpg"
   },
   {
     "id": 420,
     "name": "FIFA 18",
     "price": 195.39,
     "score": 325,
-    "image": "fifa-18.png"
+    "image": "https://cdn-products.eneba.com/resized-products/ybvx0zc8nxkqorpfjjsp_350x200_1x-0.jpg"
   },
   {
     "id": 501,
     "name": "Horizon Zero Dawn",
     "price": 115.8,
     "score": 290,
-    "image": "horizon-zero-dawn.png"
+    "image": "https://cdn-products.eneba.com/resized-products/cfp1c3QENHakdjuf424Yt6hVn_mmFbOV-M8rITUoVj8_350x200_1x-0.jpeg"
   }
 ]

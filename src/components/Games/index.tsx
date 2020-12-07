@@ -12,7 +12,7 @@ const Games: React.FC<GamesProps> = ({ imgGame, name, price, onClick }) => {
   return (
     <TouchableOpacity style={styles.container} onPress={onClick}>
       <Image
-        source={imgGame}
+        source={{uri: imgGame}}
         style={styles.gamesImg}
       />
       <Text style={styles.gamesText}>

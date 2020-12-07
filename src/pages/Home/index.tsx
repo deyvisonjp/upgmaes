@@ -80,15 +80,27 @@ function Home() {
 
         <View style={styles.games}>
 
-          {listGames.map((game) => (
+          {/* {listGames.map((game) => (
             <Games
               key={game.id}
-              imgGame={require(`../../assets/img/${game.image}`)}
+              imgGame={game.image}
               name={game.name}
               price={game.price}
               onClick='' //{() => handleNavigateToDetails(item.id)}              
             />
-          ))}
+          ))} */}
+
+          <FlatList
+            data={listGames}
+            keyExtractor={(item) => item.id}
+            renderItem={({ item }) => (
+              <View style={styles.gamesContainer}>
+                <Image source={{ uri: item.image }} style={styles.gamesImages} />
+                <Text style={styles.textGames}>{item.name}</Text>
+                <Text style={styles.textGames}>{item.price}</Text>
+              </View>
+            )}
+          />
 
         </View>
 
@@ -139,9 +151,29 @@ const styles = StyleSheet.create({
   },
   games: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
     justifyContent: 'space-around',
-    width: '100%',
+  },
+  gamesContainer: {
+    paddingVertical: '2%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    shadowColor: "#CD6900",
+    shadowOffset: {
+      width: 0,
+      height: 12,
+    },
+    shadowOpacity: 0.4,
+    shadowRadius: 10.00,
+    elevation: 10,
+  },
+  gamesImages: {
+    width: 175,
+    height: 175,
+  },
+  textGames: {
+    fontSize: 16,
+    fontFamily: 'russoOne',
+    textAlign: 'center'
   }
 });
 
