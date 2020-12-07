@@ -94,11 +94,11 @@ function Home() {
             data={listGames}
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
-              <View style={styles.gamesContainer}>
+              <TouchableOpacity style={styles.gamesContainer}>
                 <Image source={{ uri: item.image }} style={styles.gamesImages} />
                 <Text style={styles.textGames}>{item.name}</Text>
                 <Text style={styles.textGames}>{item.price}</Text>
-              </View>
+              </TouchableOpacity>
             )}
           />
 
@@ -152,19 +152,19 @@ const styles = StyleSheet.create({
   games: {
     flexDirection: 'row',
     justifyContent: 'space-around',
+    width: '100%',
+    flex: 1,
+    margin: 5,
+    padding: 5,
   },
   gamesContainer: {
-    paddingVertical: '2%',
+    width: '90%',
+    margin: 5,
+    padding: 5,
     alignItems: 'center',
-    justifyContent: 'center',
-    shadowColor: "#CD6900",
-    shadowOffset: {
-      width: 0,
-      height: 12,
-    },
-    shadowOpacity: 0.4,
-    shadowRadius: 10.00,
-    elevation: 10,
+    justifyContent: 'space-around',
+    borderBottomColor: '#CD6900',
+    borderBottomWidth: 1,
   },
   gamesImages: {
     width: 175,
